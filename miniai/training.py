@@ -47,6 +47,6 @@ def fit(epochs, model, loss_func, opt, train_dl, valid_dl):
     return tot_loss/count, tot_acc/count
 
 # %% ../nbs/04_minibatch_training.ipynb 150
-def get_dls(train_ds, valid_ds, test_ds, bs, **kwargs):
+def get_dls(train_ds, valid_ds, bs, **kwargs):
     return (DataLoader(train_ds, batch_size=bs, shuffle=True, **kwargs),
             DataLoader(valid_ds, batch_size=bs*2, **kwargs))
